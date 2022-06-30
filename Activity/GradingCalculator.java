@@ -1,33 +1,31 @@
-public class GradingCalculator{
+public class GradingCalculator {
 	
+	static char letterGrade;
+
 	public static void main(String[] args) {
+
+		int[] grade = { 95, 85, 62, 40, 79 };
+		String[] subject = {"Math", "English", "Science", "History", "Art"};
 		
-		int[] grade = {95, 85, 62, 40, 79};
-		
-		for(int i = 0; i < grade.length; i++) {
-			if(100 >= grade[i]&& grade[i] >= 90) {
-				System.out.println("Math: A");
+
+		for (int i = 0; i < grade.length; i++) {
+			if (100 >= grade[i] && grade[i] >= 90) {
+				letterGrade = 'A';
+			}else if (89 >= grade[i] && grade[i] >= 80) {
+				letterGrade = 'B';
+			}else if (79 >= grade[i] && grade[i] >= 70) {
+				letterGrade = 'C';
+			}else if (69 >= grade[i] && grade[i] >= 60) {
+				letterGrade = 'D';
+			}else if (59 >= grade[i]) {
+				letterGrade = 'F';
 			}
-			if(89 >= grade[i]&& grade[i] >= 80) {
-				System.out.println("English: B");
-			}
-			if(79 >= grade[i]&& grade[i] >= 70) {
-				System.out.println("Art: C"]);
-			}
-			if(69 >= grade[i]&& grade[i] >= 60) {
-				System.out.println("Science: D");
-			}
-			if(59 >= grade[i]) {
-				System.out.println("History: F");
-			}
+			System.out.println(subject[i] + ": " + letterGrade);
 		}
 		
-		
-		
-		
-		
-		
-		
+
+	}
+
 }
 	
 	
