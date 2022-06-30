@@ -12,12 +12,26 @@ public class MaxExample {
 		
 		double x = Math.random();
 		double y = Math.random();
+		double result = 0;
 		
+		Math.max(x,y);
+		
+		if(x > y){
+			System.out.println("The larger value of the two: x");
+		}else {
+			System.out.println("The larger value of the two: y");
+				
+		}
+
 		System.out.println("x = " + x);
 		System.out.println("y = " + y);
-		System.out.println("The larger value of the two: " + Math.max(x, y));
-
+	
+	
 	}
 
-}
 
+
+
+
+
+}
