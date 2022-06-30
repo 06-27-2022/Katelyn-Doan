@@ -6,19 +6,19 @@ public class GradingCalculator{
 		
 		for(int i = 0; i < grade.length; i++) {
 			if(100 >= grade[i]&& grade[i] >= 90) {
-				System.out.println("Math:" + grade[i]);
+				System.out.println("Math: A");
 			}
 			if(89 >= grade[i]&& grade[i] >= 80) {
-				System.out.println("English:" + grade[i]);
+				System.out.println("English: B");
 			}
 			if(79 >= grade[i]&& grade[i] >= 70) {
-				System.out.println("Art:" + grade[i]);
+				System.out.println("Art: C"]);
 			}
 			if(69 >= grade[i]&& grade[i] >= 60) {
-				System.out.println("Science:" + grade[i]);
+				System.out.println("Science: D");
 			}
 			if(59 >= grade[i]) {
-				System.out.println("History:" + grade[i]);
+				System.out.println("History: F");
 			}
 		}
 		
