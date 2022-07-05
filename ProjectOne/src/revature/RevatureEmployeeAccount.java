@@ -1,12 +1,12 @@
 package revature;
 
 
-public class Account {
+public class RevatureEmployeeAccount {
 	
 	String username;
 	String password;
 	
-	Account(String username, String password){
+	RevatureEmployeeAccount(String username, String password){
 		this.username = username;
 		this.password = password;
 	}
