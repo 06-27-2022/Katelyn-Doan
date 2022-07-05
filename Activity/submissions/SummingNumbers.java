@@ -1,3 +1,4 @@
+package submissions;
 public class SummingNumbers {
 
 	static int addTogether(int[] arr) {

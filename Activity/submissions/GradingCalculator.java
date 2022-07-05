@@ -1,3 +1,4 @@
+package submissions;
 public class GradingCalculator {
 	
 	static char letterGrade;
