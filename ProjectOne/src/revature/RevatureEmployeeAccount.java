@@ -2,9 +2,9 @@ package revature;
 
 
 public class RevatureEmployeeAccount {
-	String name;
-	String username;
-	String password;
+	private String name;
+	private String username;
+	private String password;
 	
 	RevatureEmployeeAccount(String name, String username, String password){
 		this.name = name;
