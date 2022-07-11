@@ -10,6 +10,7 @@ public class RevatureLogin {
 	protected static List<String> storedPasswords = new ArrayList<String>();
 	protected String username;
 	protected String password;
+	protected String role;
 	
 	public void autheticated(String username, String password) {
 		if(storedUsernames.contains(username) && storedPasswords.contains(password)) {
@@ -18,9 +19,10 @@ public class RevatureLogin {
 			System.out.println("Wrong username or password!");
 		}
 	}
-	public void register(String username, String password) {
+	public void register(String name, String username, String password) {
 		this.username = username;
 		this.password = password;
+		this.role = "Default Employee";
 		storedUsernames.add(username);
 		storedPasswords.add(password);
 		System.out.println("All set!");
@@ -46,15 +48,22 @@ public class RevatureLogin {
 			
 			System.out.print("Password: ");
 			String pass = scan.next();
+
 			login.autheticated(user, pass);
+
 			break;
 		
 		case 2:
+			System.out.print("What is your name?: ");
+			String name = scan.next();
+
 			System.out.print("Choose a username: ");
 			String newUser = scan.next();
+
 			System.out.print("Choose a password: ");
 			String newPass = scan.next();
-			login.register(newUser, newPass);
+			
+			login.register(name, newUser, newPass);
 			
 			break;
 		
