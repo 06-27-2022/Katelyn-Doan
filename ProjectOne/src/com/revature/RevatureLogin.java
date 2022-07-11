@@ -6,17 +6,24 @@ import java.util.Scanner;
 
 public class RevatureLogin {
 	
-	protected static List<String> storedUsernames = new ArrayList<>();
-	protected static List<String> storedPasswords = new ArrayList<>();
+	protected static List<String> storedUsernames = new ArrayList<String>();
+	protected static List<String> storedPasswords = new ArrayList<String>();
 	protected String username;
 	protected String password;
 	
-	public static void autheticated(String username, String password) {
+	public void autheticated(String username, String password) {
 		if(storedUsernames.contains(username) && storedPasswords.contains(password)) {
-			System.out.println("Access granted");
+			System.out.println("Access granted!");
 		}else {
-			System.out.println("Wrong answer");
+			System.out.println("Wrong username or password!");
 		}
+	}
+	public void register(String username, String password) {
+		this.username = username;
+		this.password = password;
+		storedUsernames.add(username);
+		storedPasswords.add(password);
+		System.out.println("All set!");
 	}
 
 	public static void main(String[] args) {
@@ -24,6 +31,7 @@ public class RevatureLogin {
 		storedUsernames.add("kndoan");
 		storedPasswords.add("potato");
 		
+		RevatureLogin login = new RevatureLogin();
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Please pick an option:");
 		System.out.println("1 - Login with existing account");
@@ -38,32 +46,22 @@ public class RevatureLogin {
 			
 			System.out.print("Password: ");
 			String pass = scan.next();
-			
+			login.autheticated(user, pass);
 			break;
 		
 		case 2:
-			System.out.println("Register blah blah");
+			System.out.print("Choose a username: ");
+			String newUser = scan.next();
+			System.out.print("Choose a password: ");
+			String newPass = scan.next();
+			login.register(newUser, newPass);
+			
 			break;
 		
 		case 3:
 			System.out.println("Quitting now . . . ");
 			scan.close();
 			
-			
-			
-//			if(storedUsernames.contains(user)) {
-//				System.out.println("Access granted");
-//			}
-			
-
-
-//			for(String i : storedUsernames) {
-//				if(storedUsernames.contains(user)){
-//					System.out.print("welcome " + user);
-//				}else {
-//					System.out.println("Wrong username or password");
-//				}
-//			}
 		
 		}
 
@@ -71,4 +69,3 @@ public class RevatureLogin {
 	}
 
 }
-
