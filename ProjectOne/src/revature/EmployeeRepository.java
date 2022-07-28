@@ -1,4 +1,4 @@
-package com.revature;
+package revature;
 
 import java.util.List;
 
@@ -12,7 +12,5 @@ public interface EmployeeRepository {
 	
 	Employee findByUsername(String username);
 	
-	Employee findByName(String name);
 
 }
-
