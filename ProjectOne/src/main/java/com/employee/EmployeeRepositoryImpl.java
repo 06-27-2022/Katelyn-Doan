@@ -28,10 +28,11 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
 			
 			while(set.next()) {
 				Employee employee = new Employee(
-						set.getString(1),
+						set.getInt(1),
 						set.getString(2),
 						set.getString(3),
-						set.getString(4));
+						set.getString(4),
+						set.getString(5));
 				employees.add(employee);
 				
 			}
