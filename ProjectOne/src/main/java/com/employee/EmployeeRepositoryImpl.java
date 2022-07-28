@@ -56,7 +56,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
 	public void save(Employee employee) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		final String SQL = "insert into revatureemployee values(?,?,?,?)";
+		final String SQL = "insert into revatureemployee values(default,?,?,?,?)";
 		
 		try {
 			conn = ConnectionUtil.getNewConnection();
