@@ -1,4 +1,4 @@
-package com.revature;
+package com.employee;
 
 import java.util.Objects;
 
@@ -10,43 +10,47 @@ public class Employee {
 	private String password;
 	
 	public Employee() {
-		
+		super();
 	}
-	
+
 	public Employee(String role, String name, String username, String password) {
-		
+		super();
 		this.role = role;
 		this.name = name;
 		this.username = username;
 		this.password = password;
 	}
-	
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
 	public String getName() {
-		return this.name;
+		return name;
 	}
-	
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getUsername() {
-		return this.username;
+		return username;
 	}
-	
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	
+
 	public String getPassword() {
-		return this.password;
+		return password;
 	}
-	
+
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	
-	public String getRole() {
-		return this.role;
-	}
-	
-	public void setRole(String role) {
-		this.role = role;
 	}
 
 	@Override
@@ -73,6 +77,6 @@ public class Employee {
 	}
 	
 	
+	
 
 }
-
