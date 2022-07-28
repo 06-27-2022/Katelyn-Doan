@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Employee {
 	
+	private int id;
 	private String role;
 	private String name;
 	private String username;
@@ -13,8 +14,9 @@ public class Employee {
 		super();
 	}
 
-	public Employee(String role, String name, String username, String password) {
+	public Employee(int id, String role, String name, String username, String password) {
 		super();
+		this.id = id;
 		this.role = role;
 		this.name = name;
 		this.username = username;
@@ -53,9 +55,17 @@ public class Employee {
 		this.password = password;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(name, password, role, username);
+		return Objects.hash(id, name, password, role, username);
 	}
 
 	@Override
@@ -67,14 +77,16 @@ public class Employee {
 		if (getClass() != obj.getClass())
 			return false;
 		Employee other = (Employee) obj;
-		return Objects.equals(name, other.name) && Objects.equals(password, other.password)
+		return id == other.id && Objects.equals(name, other.name) && Objects.equals(password, other.password)
 				&& Objects.equals(role, other.role) && Objects.equals(username, other.username);
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [role=" + role + ", name=" + name + ", username=" + username + ", password=" + password + "]";
+		return "Employee [id=" + id + ", role=" + role + ", name=" + name + ", username=" + username + ", password="
+				+ password + "]";
 	}
+	
 	
 	
 	
