@@ -12,7 +12,7 @@ public class TicketSubmissionImpl implements TicketSubmission {
 	public void save(Ticket ticket) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		final String SQL = "insert into ticketsubmission values(?,?,?,?)";
+		final String SQL = "insert into ticketsubmission values(default,?,?,?,?)";
 		
 		try {
 			conn = ConnectionUtil.getNewConnection();
