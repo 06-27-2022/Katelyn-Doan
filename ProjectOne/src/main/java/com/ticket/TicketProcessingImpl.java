@@ -10,9 +10,8 @@ import java.util.List;
 
 import com.revature.ConnectionUtil;
 
-public class TicketProcessingImpl implements TicketProcessing {
+public class TicketProcessingImpl {
 
-	@Override
 	public List<Ticket> showAllTickets() {
 			Connection conn = null;
 			Statement stmt = null;
@@ -53,7 +52,7 @@ public class TicketProcessingImpl implements TicketProcessing {
 			return tickets;
 	}
 
-	@Override
+	
 	public void approve(Ticket ticket) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
