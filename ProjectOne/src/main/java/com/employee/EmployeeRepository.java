@@ -10,7 +10,7 @@ import java.util.List;
 
 import com.revature.ConnectionUtil;
 
-public class EmployeeRepositoryImpl implements EmployeeRepository{
+public class EmployeeRepository{
 
 	public List<Employee> findAllEmployees() {
 		Connection conn = null;
@@ -53,7 +53,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
 		return employees;
 	}
 	
-	@Override
+	
 	public void save(Employee employee) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
@@ -84,13 +84,13 @@ public class EmployeeRepositoryImpl implements EmployeeRepository{
 		
 	}
 	
-	@Override
+	
 	public void update(Employee employee) {
 		// TODO Auto-generated method stub
 		
 	}
 	
-	@Override
+
 	public Employee findByUsername(String username) {
 		// TODO Auto-generated method stub
 		return null;
