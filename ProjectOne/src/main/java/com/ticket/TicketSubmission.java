@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 import com.revature.ConnectionUtil;
 
-public class TicketSubmissionImpl implements TicketSubmission {
+public class TicketSubmission{
 
-	@Override
+	
 	public void save(Ticket ticket) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
@@ -36,7 +36,6 @@ public class TicketSubmissionImpl implements TicketSubmission {
 		}
 	}
 
-	@Override
 	public void update(Ticket ticket) {
 		
 	}
