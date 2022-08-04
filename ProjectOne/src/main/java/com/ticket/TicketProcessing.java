@@ -10,7 +10,7 @@ import java.util.List;
 
 import com.revature.ConnectionUtil;
 
-public class TicketProcessingImpl {
+public class TicketProcessing {
 
 	public List<Ticket> showAllTickets() {
 			Connection conn = null;
